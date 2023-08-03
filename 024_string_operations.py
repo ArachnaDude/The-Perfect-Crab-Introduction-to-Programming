@@ -15,7 +15,7 @@ from lib.helpers import check_that_these_are_equal
 
 # Here's an example:
 
-length = len("Hello!")
+length = len("Hellooooo world!")
 print(f"The string is {length} characters long")
 
 # @TASK: Try it out yourself by changing the string "Hello!"
@@ -29,11 +29,9 @@ print(f"The string is {length} characters long")
 # == Replace ==
 
 # Let's say you wanted to turn this:
-
 "Hello, YOUR_NAME!"
 
 # Into this:
-
 "Hello, Kay!"
 
 # For this, you could use the `replace` function:
@@ -42,15 +40,15 @@ old_string = "Hello, YOUR_NAME!"
 new_string = old_string.replace("YOUR_NAME", "Kay")
 
 # Uncomment this next line to see the result
-# print(new_string)
+print(new_string)
 
 # You'll notice here that the function is coming in a
 # different place. Let's compare `len` and `replace`:
 
 my_string = "hello"
 
-len(my_string)              # <-- Independent Function
-my_string.replace("h", "w") # <-- Method Function
+len(my_string)  # <-- Independent Function
+my_string.replace("h", "w")  # <-- Method Function
 
 # Why the difference? It's a little complicated.
 #
@@ -78,15 +76,14 @@ print("Function: uppercase")
 
 # Search for 'python make string uppercase'
 
+
 def make_uppercase(string):
-  # Return the string in uppercase
-  pass
+  return string.upper()
 
-check_that_these_are_equal(
-  make_uppercase("hello"), "HELLO")
 
-check_that_these_are_equal(
-  make_uppercase("World"), "WORLD")
+check_that_these_are_equal(make_uppercase("hello"), "HELLO")
+
+check_that_these_are_equal(make_uppercase("World"), "WORLD")
 
 # == Exercise Two ==
 
@@ -95,15 +92,14 @@ print("Function: lowercase")
 
 # Search for 'python make string lowercase'
 
+
 def make_lowercase(string):
-  # Return the string in lowercase
-  pass
+  return string.lower()
 
-check_that_these_are_equal(
-  make_lowercase("HELLO"), "hello")
 
-check_that_these_are_equal(
-  make_lowercase("World"), "world")
+check_that_these_are_equal(make_lowercase("HELLO"), "hello")
+
+check_that_these_are_equal(make_lowercase("World"), "world")
 
 # == Exercise Three ==
 
@@ -112,15 +108,13 @@ print("Function: strip_whitespace")
 
 # Search for 'python remove whitespace from string'
 
+
 def strip_whitespace(string):
-  # Return the string with any whitespace removed from
-  # the start and end
-  pass
+  return string.strip()
 
-check_that_these_are_equal(
-  strip_whitespace("hello "), "hello")
 
-check_that_these_are_equal(
-  strip_whitespace(" hello world "), "hello world")
+check_that_these_are_equal(strip_whitespace("hello "), "hello")
+
+check_that_these_are_equal(strip_whitespace(" hello world "), "hello world")
 
 # When you're done, move on to 025_string_concatenation.py

@@ -20,7 +20,7 @@ else:
 
 # A while loop is perhaps the most simple:
 
-i = 0 # We call this the counter variable
+i = 0  # We call this the counter variable
 while i < 10:
   print(f"The number is now {i}")
   i = i + 1
@@ -48,13 +48,18 @@ print("Function: add_cats_repeatedly")
 #    add_cats_repeatedly([], 3)
 # => ['cats', 'cats', 'cats']
 
+
 def add_cats_repeatedly(word_list, count):
-  # ...
+  catCount = 0
+  while catCount < count:
+    word_list.append("cats")
+    catCount += 1
   return word_list
 
-check_that_these_are_equal(
-  add_cats_repeatedly([], 3), ['cats', 'cats', 'cats'])
-check_that_these_are_equal(
-  add_cats_repeatedly(['dogs'], 2), ['dogs', 'cats', 'cats'])
+
+check_that_these_are_equal(add_cats_repeatedly([], 3),
+                           ['cats', 'cats', 'cats'])
+check_that_these_are_equal(add_cats_repeatedly(['dogs'], 2),
+                           ['dogs', 'cats', 'cats'])
 
 # When you're done, move on to 033_for_loops.py
