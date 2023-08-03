@@ -66,6 +66,7 @@ print("Function: count_words_by_length")
 # result: {3: 2, 1: 1, 4: 1}
 # Since there are two words of length 3, etc.
 
+
 def count_words_by_length(words):
   wordLengths = {}
   for word in words:
@@ -75,14 +76,18 @@ def count_words_by_length(words):
       wordLengths[len(word)] += 1
   return wordLengths
 
-check_that_these_are_equal(
-  count_words_by_length(["hat", "cat", "I", "bird"]),
-  {3: 2, 1: 1, 4: 1}
-)
+
+check_that_these_are_equal(count_words_by_length(["hat", "cat", "I", "bird"]),
+                           {
+                             3: 2,
+                             1: 1,
+                             4: 1
+                           })
 
 check_that_these_are_equal(
-  count_words_by_length(["four", "four", "four", "one"]),
-  {4: 3, 3: 1}
-)
+  count_words_by_length(["four", "four", "four", "one"]), {
+    4: 3,
+    3: 1
+  })
 
 # Once you're done, move on to 039_challenge_1_example.py
